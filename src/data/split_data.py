@@ -1,8 +1,11 @@
 import pandas as pd
+import os
 from sklearn.model_selection import train_test_split
 
 raw_data_location ='/home/ubuntu/exam_PENG/examen-dvc/data/raw_data/raw.csv'
 output_dataset_location ='/home/ubuntu/exam_PENG/examen-dvc/data/processed_data'
+
+os.makedirs(output_dataset_location, exist_ok=True)
 
 data=pd.read_csv(raw_data_location)
 

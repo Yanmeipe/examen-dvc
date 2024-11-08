@@ -1,10 +1,11 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-output_dataset_location ='/home/ubuntu/exam_PENG/examen-dvc/data/processed_data'
+input_dataset_location ='/home/ubuntu/exam_PENG/examen-dvc/data/processed_data'
+output_dataset_location ='/home/ubuntu/exam_PENG/examen-dvc/data/scaled'
 
-X_train = pd.read_csv(output_dataset_location+'/X_train.csv')
-X_test = pd.read_csv(output_dataset_location+'/X_test.csv')
+X_train = pd.read_csv(input_dataset_location+'/X_train.csv')
+X_test = pd.read_csv(input_dataset_location+'/X_test.csv')
 
 X_train_numeric = X_train.select_dtypes(include=['float64', 'int64'])
 X_test_numeric = X_test.select_dtypes(include=['float64', 'int64'])
